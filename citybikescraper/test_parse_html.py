@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 
 from os.path import dirname, join as pjoin
 
@@ -38,9 +39,9 @@ def test_that_every_longitude_is_reasonable():
         yield assert_less_equal, longitude, -2.9
 
 
-def test_that_every_location_name_is_string():
+def test_that_every_location_name_is_unicode_string():
     for name in (l['locationName'] for l in LOCATIONS):
-        yield assert_is_instance, name, str
+        yield assert_is_instance, name, type('')
 
 
 def test_that_every_location_name_is_non_empty():

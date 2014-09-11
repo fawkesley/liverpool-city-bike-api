@@ -1,0 +1,10 @@
+{
+  "Latitude": 53.4051319444,
+  "Longitude": -2.9971558333,
+  "LocalTitle": "Pier Head Ferry Terminal",
+  "LocalInformation": "\u003ctable\u003e\r\n\u003ctr\u003e\u003ctd\u003ecitybike\u003c/td\u003e\u003ctd\u003e...\u003c/td\u003e\u003ctd class=\u0027bikes-count\u0027\u003e3\u003c/td\u003e\u003c/tr\u003e\r\n\u003ctr\u003e\u003ctd\u003eEmpty locks\u003c/td\u003e\u003ctd\u003e...\u003c/td\u003e\u003ctd class=\u0027bikes-count\u0027\u003e7\u003c/td\u003e\u003c/tr\u003e\r\n\u003c/table\u003e\r\n",
+  "AvailableBikesCount": 3,
+  "FreeLocksCount": 7,
+  "StatusPercentageNumber": 2,
+  "StationSizeShortcut": "m"
+}

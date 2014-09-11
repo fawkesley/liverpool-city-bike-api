@@ -1,5 +1,7 @@
 ## Liverpool CityBike API (unofficial)
 
+[![Build Status](https://travis-ci.org/paulfurley/liverpool-city-bike-api.svg?branch=master)](https://travis-ci.org/paulfurley/liverpool-city-bike-api)
+
 Liverpool CityBike is a marvellous bike-hiring scheme.
 
 The website displays the realtime locations of bikes in the city.

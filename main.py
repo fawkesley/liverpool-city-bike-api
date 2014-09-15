@@ -1,22 +1,14 @@
 #!/usr/bin/env python
 
-import json
 import logging
 
-from citybikescraper import get_latest_locations
+from citybikescraper import generate_locations_json
 
 
 def main():
     logging.basicConfig(level=logging.INFO)
 
-    locations = get_latest_locations()
-    output_json = json.dumps({
-        'lastRefreshed': '2014-09-11T17:38:00Z',
-        'lastChanged': '2014-09-11T17:38:00Z',
-        'locations': locations
-    }, indent=4)
-
-    print(output_json)
+    print(generate_locations_json())
     return 0
 
 

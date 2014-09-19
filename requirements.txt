@@ -1,3 +1,4 @@
 requests==2.4.0
 boto==2.32.1
 pytz==2014.7
+six==1.8.0

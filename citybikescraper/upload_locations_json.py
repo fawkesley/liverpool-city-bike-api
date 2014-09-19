@@ -1,14 +1,13 @@
 #!/usr/bin/env python
 
+from __future__ import unicode_literals
+
 import gzip
 import logging
 import os
 import sys
 
-try:
-    from io import StringIO         # Python 3
-except ImportError:
-    from cStringIO import StringIO  # Python 2
+from six import BytesIO
 
 import boto
 
@@ -44,7 +43,7 @@ def upload_locations_json(json_string):
 
 
 def gzip_compress(string):
-    out = StringIO()
+    out = BytesIO()
     with gzip.GzipFile(fileobj=out, mode='w') as f:
         f.write(string)
     return out.getvalue()

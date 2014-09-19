@@ -1,5 +1,7 @@
 from __future__ import unicode_literals
 
+import six
+
 from os.path import dirname, join as pjoin
 
 from nose.tools import (assert_equal, assert_is_instance, assert_greater_equal,
@@ -41,7 +43,7 @@ def test_that_every_longitude_is_reasonable():
 
 def test_that_every_location_name_is_unicode_string():
     for name in (l['locationName'] for l in LOCATIONS):
-        yield assert_is_instance, name, type('')
+        yield assert_is_instance, name, six.text_type
 
 
 def test_that_every_location_name_is_non_empty():

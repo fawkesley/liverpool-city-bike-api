@@ -1,7 +1,6 @@
-try:
-    from io import StringIO
-except ImportError:
-    from cStringIO import StringIO
+from __future__ import unicode_literals
+
+from six import StringIO
 
 import logging
 logger = logging.getLogger(__name__)

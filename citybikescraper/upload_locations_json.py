@@ -31,6 +31,10 @@ def upload_locations_json(json_string):
 
     conn = boto.connect_s3(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)
     bucket = conn.get_bucket(AWS_BUCKET_NAME)
+    cors = boto.s3.cors.CORSConfiguration()
+    cors.add_rule('GET', '*', allowed_header="*")
+    assert bucket.set_cors(cors), 'Failed to set CORS headers'
+
     k = bucket.new_key(AWS_KEY_NAME)
 
     k.content_type = 'application/json'

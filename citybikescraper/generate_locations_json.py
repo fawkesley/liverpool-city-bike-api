@@ -10,7 +10,6 @@ from .get_latest_locations import get_latest_locations
 def generate_locations_json():
     locations = get_latest_locations()
     output_json = json.dumps({
-        'lastChanged': '2014-09-11T17:38:00Z',
         'lastRefreshed': format_datetime(utc_now()),
         'locations': locations
     }, indent=4)

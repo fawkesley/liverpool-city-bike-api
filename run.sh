@@ -30,7 +30,7 @@ function run_main_code {
     export PYTHONIOENCODING="utf-8"
     command=${THIS_DIR}/main.py
     # Line buffering, see http://unix.stackexchange.com/a/25378
-    stdbuf -oL -eL run-one ${command} >> ${LOG_FILE} 2>&1
+    stdbuf -oL -eL run-this-one ${command} >> ${LOG_FILE} 2>&1
     RETCODE=$?
     if [ ${RETCODE} != 0 ]; then
         echo "$@ exited with code: ${RETCODE}"

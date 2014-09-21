@@ -6,9 +6,13 @@ import pytz
 
 from .get_latest_locations import get_latest_locations
 
+import logging
+logger = logging.getLogger(__name__)
+
 
 def generate_locations_json():
     locations = get_latest_locations()
+    logger.info('Got {} CityBike locations'.format(len(locations)))
     output_json = json.dumps({
         'lastRefreshed': format_datetime(utc_now()),
         'locations': locations

@@ -11,6 +11,8 @@ from six import BytesIO
 
 import boto
 
+logger = logging.getLogger(__name__)
+
 __all__ = ['upload_locations_json']
 
 AWS_KEY_NAME = 'v1/locations.json'
@@ -39,11 +41,12 @@ def upload_locations_json(json_string):
 
     k.content_type = 'application/json'
 
-    k.set_contents_from_string(
+    bytes_written = k.set_contents_from_string(
         gzipped_json,
         headers={'Content-Encoding': 'gzip'},
         replace=True,
         policy='public-read')
+    logger.info('Wrote {} bytes to {}'.format(bytes_written, AWS_KEY_NAME))
 
 
 def gzip_compress(string):

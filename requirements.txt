@@ -1,4 +1,4 @@
-requests==2.19.0
+requests==2.19.1
 boto==2.48.0
 pytz==2018.4
 six==1.11.0
